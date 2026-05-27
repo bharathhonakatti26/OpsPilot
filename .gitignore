@@ -1,0 +1,52 @@
+# Global Environment Files
+.env
+.env.*
+
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Docker
+docker-data/
+docker-volumes/
+
+# Kubernetes
+kubeconfig*
+
+# Terraform
+.terraform/
+*.tfstate*
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+
+# Security
+*.pem
+*.key
+*.crt
+
+# Coverage
+coverage/
+
+# Cache
+.cache/
+
+# Uploads
+uploads/
+
+# Misc
+*.tgz
+*.zip
