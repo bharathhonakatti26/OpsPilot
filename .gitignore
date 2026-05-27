@@ -1,52 +1,57 @@
-# Global Environment Files
+# =========================
+# Root Environment
+# =========================
 .env
 .env.*
 
-!.env.example
+# =========================
+# Docker Compose Overrides
+# =========================
+docker-compose.override.yml
 
+# =========================
 # Logs
+# =========================
 logs/
 *.log
 
-# OS Files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/*
-!.vscode/extensions.json
-.idea/
-
-# Docker
-docker-data/
-docker-volumes/
-
-# Kubernetes
-kubeconfig*
-
+# =========================
 # Terraform
+# =========================
 .terraform/
-*.tfstate*
+*.tfstate
+*.tfstate.*
 
-# Temporary
-*.tmp
-*.temp
-*.bak
+# =========================
+# Kubernetes
+# =========================
+*.kubeconfig
 
-# Security
+# =========================
+# Secrets
+# =========================
 *.pem
 *.key
 *.crt
+*.p12
+*.pfx
 
-# Coverage
-coverage/
+# =========================
+# SonarQube
+# =========================
+.scannerwork/
 
-# Cache
-.cache/
+# =========================
+# Trivy
+# =========================
+.trivycache/
 
-# Uploads
-uploads/
+# =========================
+# Jenkins
+# =========================
+.jenkins/
 
-# Misc
-*.tgz
-*.zip
+# =========================
+# Docker
+# =========================
+docker-data/
