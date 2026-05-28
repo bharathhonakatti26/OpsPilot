@@ -10,9 +10,9 @@ commonLabels:
 resources:
   - namespace.yml
   - backend-configmap.yml
-  - backend-secret.example.yml
-  - mongodb-secret.example.yml
-  - redis-secret.example.yml
+  - backend-secret.yml
+  - mongodb-secret.yml
+  - redis-secret.yml
   - backend-deployment.yml
   - backend-service.yml
   - frontend-deployment.yml
