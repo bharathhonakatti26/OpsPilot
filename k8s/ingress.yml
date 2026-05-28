@@ -6,10 +6,8 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
-    alb.ingress.kubernetes.io/ssl-redirect: "443"
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
     alb.ingress.kubernetes.io/health-check-path: /api/v1/health
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:YOUR_AWS_REGION:YOUR_AWS_ACCOUNT_ID:certificate/YOUR_CERTIFICATE_ID
 spec:
   ingressClassName: alb
   rules:
