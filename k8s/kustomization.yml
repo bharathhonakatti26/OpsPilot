@@ -3,16 +3,14 @@ kind: Kustomization
 
 namespace: opspilot
 
-commonLabels:
-  app.kubernetes.io/name: opspilot
-  app.kubernetes.io/part-of: opspilot
+labels:
+  - pairs:
+      app.kubernetes.io/name: opspilot
+      app.kubernetes.io/part-of: opspilot
 
 resources:
   - namespace.yml
   - backend-configmap.yml
-  - backend-secret.yml
-  - mongodb-secret.yml
-  - redis-secret.yml
   - backend-deployment.yml
   - backend-service.yml
   - frontend-deployment.yml

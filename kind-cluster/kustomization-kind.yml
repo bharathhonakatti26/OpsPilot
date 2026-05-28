@@ -3,6 +3,9 @@ kind: Kustomization
 
 resources:
   - ../k8s
+  - ../k8s/backend-secret.yml
+  - ../k8s/mongodb-secret.yml
+  - ../k8s/redis-secret.yml
   - ingress-kind.yml
 
 patches:
