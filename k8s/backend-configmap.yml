@@ -5,9 +5,9 @@ metadata:
 data:
   PORT: "5000"
   NODE_ENV: "production"
-  CLIENT_URL: "https://your-domain.com"
-  CORS_ORIGIN: "https://your-domain.com"
-  SOCKET_CORS_ORIGIN: "https://your-domain.com"
+  CLIENT_URL: "http://16.59.207.30"
+  CORS_ORIGIN: "http://16.59.207.30"
+  SOCKET_CORS_ORIGIN: "http://16.59.207.30"
   LOG_LEVEL: "info"
   RATE_LIMIT_WINDOW_MS: "900000"
   RATE_LIMIT_MAX: "100"
@@ -23,6 +23,6 @@ data:
   EMAIL_VERIFY_TTL_SECONDS: "86400"
   PASSWORD_RESET_TTL_SECONDS: "3600"
   COOKIE_SAMESITE: "lax"
-  COOKIE_SECURE: "true"
-  COOKIE_DOMAIN: ".your-domain.com"
+  COOKIE_SECURE: "false"
+  COOKIE_DOMAIN: ""
 
