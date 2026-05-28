@@ -22,6 +22,7 @@ services:
       - opspilot-network
 
   backend:
+    image: opspilot-backend:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -44,6 +45,7 @@ services:
       - /app/node_modules
 
   frontend:
+    image: opspilot-frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile

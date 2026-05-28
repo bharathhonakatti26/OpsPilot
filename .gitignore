@@ -28,6 +28,12 @@ logs/
 *.kubeconfig
 
 # =========================
+# Kubernetes Secrets (local only)
+# =========================
+k8s/*-secret.yml
+k8s/*-secret.yaml
+
+# =========================
 # Secrets
 # =========================
 *.pem
