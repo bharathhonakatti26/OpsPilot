@@ -18,7 +18,7 @@ spec:
         fsGroup: 101
       containers:
         - name: frontend
-          image: ghcr.io/bharathhonakatti26/opspilot-frontend:latest
+          image: opspilot-frontend:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
