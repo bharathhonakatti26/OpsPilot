@@ -31,6 +31,13 @@ spec:
           volumeMounts:
             - name: uploads
               mountPath: /app/uploads
+          startupProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+            failureThreshold: 60
+            periodSeconds: 5
+            timeoutSeconds: 3
           livenessProbe:
             httpGet:
               path: /health

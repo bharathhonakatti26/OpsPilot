@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: mongodb
 spec:
+  publishNotReadyAddresses: true
   clusterIP: None
   selector:
     app: mongodb
