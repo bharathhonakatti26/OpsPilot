@@ -21,7 +21,7 @@ spec:
           image: opspilot-frontend:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 5173
               name: http
           livenessProbe:
             httpGet:
