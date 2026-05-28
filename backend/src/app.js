@@ -13,6 +13,7 @@ import { responseHandler } from './middlewares/responseHandler.js'
 import { notFound } from './middlewares/notFound.js'
 import { errorHandler } from './middlewares/errorHandler.js'
 import routes from './routes/index.js'
+import healthRoutes from './routes/health.routes.js'
 
 export const createApp = () => {
   const app = express()
@@ -28,6 +29,9 @@ export const createApp = () => {
   app.use(mongoSanitize())
   app.use(xss())
   app.use(hpp())
+  // expose health endpoints before rate limiter so Kubernetes probes are not rate-limited
+  app.use('/api/v1', healthRoutes)
+
   app.use(apiLimiter)
   app.use(responseHandler)
 
