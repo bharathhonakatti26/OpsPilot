@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/bharathhonakatti26/OpsPilot.git
     targetRevision: develop
-    path: k8s
+    path: kind-cluster
   destination:
     server: https://kubernetes.default.svc
     namespace: opspilot
