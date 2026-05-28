@@ -52,11 +52,6 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /data/db
-          securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-                - ALL
   volumeClaimTemplates:
     - metadata:
         name: data
