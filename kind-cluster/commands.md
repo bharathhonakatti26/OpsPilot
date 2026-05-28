@@ -64,6 +64,19 @@ kind load docker-image opspilot-frontend:latest --name opspilot-kind
 
 Why this works: Compose still builds the backend and frontend images, but now it tags them as `opspilot-backend:latest` and `opspilot-frontend:latest`, which Kind can load directly.
 
+## 4b. Push images for Argo CD on EC2
+
+If you are using Argo CD with the `k8s` folder from GitHub, push the images to GitHub Container Registry so the cluster can pull them:
+
+```bash
+docker build -t ghcr.io/bharathhonakatti26/opspilot-backend:latest ./backend
+docker build -t ghcr.io/bharathhonakatti26/opspilot-frontend:latest ./frontend
+docker push ghcr.io/bharathhonakatti26/opspilot-backend:latest
+docker push ghcr.io/bharathhonakatti26/opspilot-frontend:latest
+```
+
+Then let Argo CD sync [k8s/argocd-application.yml](../k8s/argocd-application.yml) with `path: k8s`.
+
 ## 5. Ensure Kubernetes secrets exist
 
 Use your local secrets files:

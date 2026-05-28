@@ -18,7 +18,7 @@ spec:
         fsGroup: 101
       containers:
         - name: frontend
-          image: YOUR_AWS_ACCOUNT_ID.dkr.ecr.YOUR_AWS_REGION.amazonaws.com/opspilot-frontend:latest
+          image: ghcr.io/bharathhonakatti26/opspilot-frontend:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
