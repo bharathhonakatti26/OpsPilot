@@ -5,7 +5,9 @@ let socket
 
 export const createSocket = (token) => {
   if (!socket) {
-    socket = io(env.socketUrl, {
+    const socketUrl = env.socketUrl.startsWith('http') ? env.socketUrl : window.location.origin
+
+    socket = io(socketUrl, {
       autoConnect: false,
       auth: token ? { token } : {},
       transports: ['websocket'],
